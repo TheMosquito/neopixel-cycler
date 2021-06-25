@@ -5,11 +5,6 @@ SERVICE_NAME:="neopixel-cycler"
 SERVICE_VERSION:="1.0.0"
 PATTERN_NAME:="pattern-neopixel-cycler"
 
-# Optionally, set these variables in the shell environment
-#   NEOPIXEL_COLOR
-#   SECONDS_ON
-#   SECONDS_OFF
-
 # Leave blank for public DockerHub containers
 # CONTAINER_CREDS:=-r "registry.wherever.com:myid:mypw"
 CONTAINER_CREDS:=
