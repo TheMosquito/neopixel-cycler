@@ -52,7 +52,7 @@ def wheel(pos):
     r = 0
     g = int(pos * 3)
     b = int(255 - pos * 3)
-  return (r, g, b)
+  return (r / 8, g / 8, b / 8)
 
 # Loop forever displaying the rotating rainbow, crashing optionally :-)
 DO_CRASH = False
@@ -68,6 +68,9 @@ while True:
       else:
         time.sleep(0.01)
   if DO_CRASH:
-    # Pause then eliberately crash
+    # Turn off the pixels, then deliberately crash
+    for i in range(NUM_PIXELS):
+      pixels[i] = 0
+    pixels.show()
     time.sleep(2.0)
     sys.exit(-1)
